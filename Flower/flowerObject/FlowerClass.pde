@@ -7,17 +7,19 @@ class Flower {
   float x;       // x-position of the center of the flower
   float y;       // y-position of the center of the flower
   int petalColor;//hexadecimal number for the color of petals
+  int midterfarve;
   int xdirection = 1;
   int ydirection = 1;
   float xspeed;
   float yspeed;
 
-  Flower(float temp_r, int temp_n_petals, float temp_x, float temp_y, int temp_petalColor,float tempxspeed, float tempyspeed) {
+  Flower(float temp_r, int temp_n_petals, float temp_x, float temp_y,int tempmidterfarve, int temp_petalColor,float tempxspeed, float tempyspeed) {
     r=temp_r;
     n_petals = temp_n_petals;
     x=temp_x;
     y=temp_y;
     petalColor=temp_petalColor;
+    midterfarve = tempmidterfarve;
     xspeed=tempxspeed;
     yspeed=tempyspeed;
   }
@@ -38,7 +40,7 @@ class Flower {
       ballY=y + r*sin(i);
       ellipse(ballX, ballY, r, r);
     }
-    fill(200, 0, 0);
+    fill(midterfarve);
     ellipse(x, y, r*1.2, r*1.2);
     
   }

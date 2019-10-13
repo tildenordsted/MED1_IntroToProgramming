@@ -11,9 +11,9 @@ void setup() {
   float _x=width/2;
   float _y=height/2;
   int _pc=#FFA000;
-  myFlower1 = new Flower(_r1,_petals,_x,_y,_pc,2.3, 2.5);
-  myFlower2 = new Flower(50, 20, _x,_y,_pc, 3.3, 5.9);
-  myFlower3 = new Flower(_r1,_petals,_x+50,_y,_pc,10.10,10.10);
+  myFlower1 = new Flower(_r1,_petals,_x,_y,#FFF27C, #FFAE7C,2.3, 2.5);
+  myFlower2 = new Flower(50, 20, _x,_y,#FFF27C ,#FF7CE9, 3.3, 5.9);
+  myFlower3 = new Flower(_r1,_petals,_x+50,_y,#FFF27C, #C17CFF,10.10,10.10);
 
 //  myFlower2 = new Flower();
 //   myFlower3 = new Flower();
