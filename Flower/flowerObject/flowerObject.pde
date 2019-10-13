@@ -3,25 +3,26 @@ Flower myFlower2;
 Flower myFlower3;
 
 void setup() {
-  size(1600,1200);
-  background(#43AF76);
+  size(800,700);
+  
   
   int _r1= 60;
   int _petals=7;
   float _x=width/2;
   float _y=height/2;
   int _pc=#FFA000;
-  myFlower1 = new Flower(_r1,_petals,_x,_y,_pc);
-  myFlower2 = new Flower(_r1,_petals,_x+random(-100,100),_y,_pc);
-  myFlower3 = new Flower(_r1,_petals,_x+50,_y,_pc);
+  myFlower1 = new Flower(_r1,_petals,_x,_y,_pc,2.3, 2.5);
+  myFlower2 = new Flower(50, 20, _x,_y,_pc, 3.3, 5.9);
+  myFlower3 = new Flower(_r1,_petals,_x+50,_y,_pc,10.10,10.10);
 
 //  myFlower2 = new Flower();
 //   myFlower3 = new Flower();
 }
 
 void draw(){
+  background(#499FE8);
   myFlower1.display();
   myFlower2.display();
   myFlower3.display();
-  noLoop();
+
 }
