@@ -12,6 +12,7 @@ class Flower {
   int ydirection = 1;
   float xspeed;
   float yspeed;
+  boolean ramt;
 
   Flower(float temp_r, int temp_n_petals, float temp_x, float temp_y,int tempmidterfarve, int temp_petalColor,float tempxspeed, float tempyspeed) {
     r=temp_r;
@@ -23,12 +24,20 @@ class Flower {
     xspeed=tempxspeed;
     yspeed=tempyspeed;
   }
+  
+  Flower(float r, int midterfarve, float x, float y){
+    this.r = r;
+    this.midterfarve = midterfarve;
+    this.x = x;
+    this.y = y;
+  }
+  void displayC (){
+   fill (midterfarve);
+   ellipse (x,y,r,r);
+  } 
 
   void display () {
-    
-    flytteflytte();
-    flytterigtigt();
-
+   
     float ballX;
     float ballY;
 
@@ -59,5 +68,18 @@ class Flower {
     
    x = x + ( xspeed * xdirection );
   y = y + ( yspeed * ydirection ); 
+  }
+  
+  void flyttemus(){
+    x = mouseX;
+    y = mouseY;
+  }
+  void rammeramme(Flower blomst){
+    if (dist(blomst.x,blomst.y,x,y)<r*2){
+    ramt = true;
+    }
+    else{
+    ramt=false;
+    }
   }
 }

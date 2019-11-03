@@ -1,6 +1,7 @@
 Flower myFlower1;  // the first instance of the Flower class
 Flower myFlower2;
 Flower myFlower3;
+Flower c;
 
 void setup() {
   size(800,700);
@@ -14,15 +15,31 @@ void setup() {
   myFlower1 = new Flower(_r1,_petals,_x,_y,#FFF27C, #FFAE7C,2.3, 2.5);
   myFlower2 = new Flower(50, 20, _x,_y,#FFF27C ,#FF7CE9, 3.3, 5.9);
   myFlower3 = new Flower(_r1,_petals,_x+50,_y,#FFF27C, #C17CFF,10.10,10.10);
+  c = new Flower(10,#9FF094,_x,_y);
 
 //  myFlower2 = new Flower();
 //   myFlower3 = new Flower();
 }
 
 void draw(){
+  if( myFlower2.ramt == true){
+    background(#F09494);
+  }
+  else{ 
   background(#499FE8);
+  }
   myFlower1.display();
+  myFlower1.flytterigtigt();
+  myFlower1.flytteflytte();
   myFlower2.display();
+  myFlower2.flyttemus();
+  myFlower2.rammeramme(myFlower1);
   myFlower3.display();
+  myFlower3.flytterigtigt();
+  myFlower3.flytteflytte();
+  c.displayC();
+  c.flytterigtigt();
+  c.flytteflytte();
+  
 
 }
