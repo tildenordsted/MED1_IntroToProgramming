@@ -31,6 +31,7 @@ class Flower {
     this.x = x;
     this.y = y;
   }
+  
   void displayC (){
    fill (midterfarve);
    ellipse (x,y,r,r);
@@ -74,6 +75,7 @@ class Flower {
     x = mouseX;
     y = mouseY;
   }
+  
   void rammeramme(Flower blomst){
     if (dist(blomst.x,blomst.y,x,y)<r*2){
     ramt = true;

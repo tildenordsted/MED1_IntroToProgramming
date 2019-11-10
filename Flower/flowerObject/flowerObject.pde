@@ -1,6 +1,7 @@
 Flower myFlower1;  // the first instance of the Flower class
 Flower myFlower2;
 Flower myFlower3;
+Flower[] flowerArray;
 Flower c;
 
 void setup() {
@@ -16,6 +17,15 @@ void setup() {
   myFlower2 = new Flower(50, 20, _x,_y,#FFF27C ,#FF7CE9, 3.3, 5.9);
   myFlower3 = new Flower(_r1,_petals,_x+50,_y,#FFF27C, #C17CFF,10.10,10.10);
   c = new Flower(10,#9FF094,_x,_y);
+  
+  flowerArray = new Flower[10];
+  
+  for(int i=0; i<flowerArray.length;i++){
+    _x = random(100,width-100);
+    _y = random(100,height-100);
+    _r1 = 5 * i; 
+   flowerArray[i] = new Flower(_r1,_petals,_x,_y,#FFF27C, #C17CFF,10.10,10.10);
+  }
 
 //  myFlower2 = new Flower();
 //   myFlower3 = new Flower();
@@ -41,5 +51,9 @@ void draw(){
   c.flytterigtigt();
   c.flytteflytte();
   
-
+for(int i=0; i<flowerArray.length;i++){
+ flowerArray[i].display();
+ flowerArray[i].flytterigtigt();
+ flowerArray[i].flytteflytte();
+}
 }
